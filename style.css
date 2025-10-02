@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a237e; /* Dark blue background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px; /* Wider container for more inputs */
+    background-color: #263238;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    text-align: center;
+    color: #ffeb3b;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #d32f2f;
+    border-radius: 8px;
+}
+header h2 {
+    text-align: center;
+    color: #cfd8dc;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.input-card, .results-card, .history-card {
+    background-color: #37474f;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+/* Styling for module groups */
+.module-group {
+    background-color: #455a64;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.module-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffeb3b;
+    border-bottom: 1px solid #546e7a;
+    padding-bottom: 5px;
+}
+
+.module-group input[type="number"] {
+    width: calc(33.33% - 10px); /* Three inputs on one line */
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #546e7a;
+    color: #ffffff;
+    font-size: 14px;
+}
+/* Last input in the group */
+.module-group input[type="number"]:last-child {
+    margin-right: 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #546e7a;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#calculateBtn, #exportCsvBtn, #clearHistoryBtn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#calculateBtn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.results-card h2 {
+    color: #ffeb3b;
+    border-bottom: 2px solid #546e7a;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Styling for Pass/Fail status */
+.PASS {
+    color: #4CAF50; /* Green */
+    font-weight: bold;
+}
+
+.FAIL {
+    color: #F44336; /* Red */
+    font-weight: bold;
+}
+
+/* Simplified display for module results */
+#moduleResults p {
+    margin: 5px 0;
+    padding: 5px;
+    border-left: 5px solid #ffeb3b;
+    background-color: #455a64;
+    border-radius: 5px;
+}
+
+#exportCsvBtn, #clearHistoryBtn {
+    width: auto;
+    display: inline-block;
+    margin-top: 10px;
+}
+#historyTable {
+    /* ... (Table styles from previous version can be reused/modified) ... */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
