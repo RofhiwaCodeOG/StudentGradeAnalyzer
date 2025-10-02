@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Student Grade Analyzer - Varsity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>IT STUDENT GRADE ANALYZER</h1>
+            <h2>Varsity Modules (3 Tests Each)</h2>
+        </header>
+        
+        <div class="input-card">
+            <input type="text" id="studentName" placeholder="Enter Full Name">
+            
+            <h3>AI and Advanced Databases</h3>
+            <div class="module-group" data-module-id="AIADY4A">
+                <label>ADVANCED DATABASES (AIADY4A):</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+
+            <div class="module-group" data-module-id="ASAIY4A">
+                <label>ARTIFICIAL INTELLIGENCE (ASAIY4A):</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="AIRMY4A">
+                <label>RESEARCH METHODOLOGY FOR IS (AIRMY4A):</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="AIUEY4A">
+                <label>USER EXPERIENCE DESIGN (UXD) (AIUEY4A):</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="ADVSOFT">
+                <label>ADVANCED SOFTWARE DESIGN:</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="EMERGTECH">
+                <label>EMERGING TECHNOLOGIES:</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="ITMNGMNT">
+                <label>IT MANAGEMENT:</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+            
+            <div class="module-group" data-module-id="STATIT">
+                <label>STATISTICS FOR IT:</label>
+                <input type="number" data-test="1" placeholder="Test 1 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="2" placeholder="Test 2 Mark (0-100)" min="0" max="100">
+                <input type="number" data-test="3" placeholder="Test 3 Mark (0-100)" min="0" max="100">
+            </div>
+
+            <button id="calculateBtn">Calculate Module Status</button>
+        </div>
+
+        <div class="results-card" id="resultsArea">
+            <h2>Overall Status: <span id="overallStatus"></span></h2>
+            <div id="moduleResults">
+                </div>
+            <p id="overallAverage"></p>
+        </div>
+
+        <div class="history-card">
+            <h2>History</h2>
+            <button id="exportCsvBtn">Export History to CSV</button>
+            <button id="clearHistoryBtn">Clear History</button>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Adv. DB Avg.</th>
+                        <th>AI Avg.</th>
+                        <th>Research Avg.</th>
+                        <th>UXD Avg.</th>
+                        <th>... (Other Modules)</th>
+                        <th>Overall Average</th>
+                        <th>Overall Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
